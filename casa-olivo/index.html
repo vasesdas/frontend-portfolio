@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Casa Olivo — Italian Trattoria & Café</title>
+  <meta name="description" content="Casa Olivo is a family-run Italian trattoria and café serving fresh pasta, wood-fired pizza and homemade desserts.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,700;1,500&family=Lato:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header class="header">
+    <div class="container header__inner">
+      <a href="#home" class="logo">Casa <span>Olivo</span></a>
+      <nav class="nav" id="nav">
+        <a href="#about">About</a>
+        <a href="#menu">Menu</a>
+        <a href="#gallery">Gallery</a>
+        <a href="#reviews">Reviews</a>
+        <a href="#visit">Visit</a>
+        <a href="#book" class="btn btn--small">Book a table</a>
+      </nav>
+      <button class="burger" id="burger" aria-label="Open menu" aria-expanded="false" aria-controls="nav">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <!-- HERO -->
+    <section class="hero" id="home">
+      <div class="container hero__content">
+        <p class="hero__tag">Family-run since 1998</p>
+        <h1>Real Italian food,<br>made with love.</h1>
+        <p class="hero__text">Fresh handmade pasta, wood-fired pizza and the best tiramisù in town — right in the heart of the old quarter.</p>
+        <div class="hero__buttons">
+          <a href="#book" class="btn">Book a table</a>
+          <a href="#menu" class="btn btn--outline">View menu</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- FEATURES STRIP -->
+    <section class="strip">
+      <div class="container strip__grid">
+        <div><span class="strip__icon">🍝</span><b>Fresh pasta</b><p>Made by hand every morning</p></div>
+        <div><span class="strip__icon">🔥</span><b>Wood-fired oven</b><p>Neapolitan-style pizza</p></div>
+        <div><span class="strip__icon">🌿</span><b>Local ingredients</b><p>From farms we know by name</p></div>
+        <div><span class="strip__icon">🚲</span><b>Takeaway</b><p>Order by phone, ready in 20 min</p></div>
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section class="section" id="about">
+      <div class="container about">
+        <div class="about__img">
+          <img src="https://images.unsplash.com/photo-1577219491135-ce391730fb2c?w=900&q=80" alt="Our chef preparing a dish" loading="lazy">
+        </div>
+        <div>
+          <p class="eyebrow">Our story</p>
+          <h2>A little piece of Italy around the corner</h2>
+          <p>Casa Olivo was opened by Marco and Giulia Bianchi with one simple idea: cook the food they grew up with in Tuscany, using honest ingredients and recipes passed down through three generations.</p>
+          <p>Twenty-five years later, we still roll our pasta by hand, bake our bread every morning and greet every guest like family.</p>
+          <p class="signature">— Marco & Giulia</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- MENU -->
+    <section class="section section--cream" id="menu">
+      <div class="container">
+        <div class="section__head">
+          <p class="eyebrow">Our menu</p>
+          <h2>Something for everyone</h2>
+        </div>
+
+        <div class="tabs" role="tablist" aria-label="Menu categories">
+          <button class="tab is-active" role="tab" aria-selected="true" aria-controls="starters" id="tab-starters">Starters</button>
+          <button class="tab" role="tab" aria-selected="false" aria-controls="mains" id="tab-mains">Pasta & Pizza</button>
+          <button class="tab" role="tab" aria-selected="false" aria-controls="desserts" id="tab-desserts">Desserts</button>
+          <button class="tab" role="tab" aria-selected="false" aria-controls="drinks" id="tab-drinks">Drinks</button>
+        </div>
+
+        <div class="menu-panel" id="starters" role="tabpanel" aria-labelledby="tab-starters">
+          <ul class="menu-list">
+            <li><div class="menu-item__row"><h3>Bruschetta al Pomodoro</h3><span class="dots"></span><b>$8</b></div><p>Grilled bread, ripe tomatoes, garlic, basil, olive oil</p></li>
+            <li><div class="menu-item__row"><h3>Burrata & Prosciutto</h3><span class="dots"></span><b>$14</b></div><p>Creamy burrata, Parma ham, rocket, balsamic glaze</p></li>
+            <li><div class="menu-item__row"><h3>Arancini <span class="tag">V</span></h3><span class="dots"></span><b>$9</b></div><p>Crispy risotto balls with mozzarella and tomato sauce</p></li>
+            <li><div class="menu-item__row"><h3>Minestrone <span class="tag">V</span></h3><span class="dots"></span><b>$7</b></div><p>Seasonal vegetable soup with beans and pesto</p></li>
+          </ul>
+        </div>
+
+        <div class="menu-panel" id="mains" role="tabpanel" aria-labelledby="tab-mains" hidden>
+          <ul class="menu-list">
+            <li><div class="menu-item__row"><h3>Tagliatelle al Ragù</h3><span class="dots"></span><b>$17</b></div><p>Fresh egg pasta, slow-cooked beef and pork ragù</p></li>
+            <li><div class="menu-item__row"><h3>Spaghetti Carbonara</h3><span class="dots"></span><b>$16</b></div><p>Guanciale, egg yolk, pecorino romano, black pepper</p></li>
+            <li><div class="menu-item__row"><h3>Pizza Margherita <span class="tag">V</span></h3><span class="dots"></span><b>$13</b></div><p>San Marzano tomatoes, fior di latte, basil</p></li>
+            <li><div class="menu-item__row"><h3>Pizza Diavola <span class="tag tag--hot">🌶</span></h3><span class="dots"></span><b>$15</b></div><p>Spicy salami, mozzarella, chilli oil</p></li>
+            <li><div class="menu-item__row"><h3>Risotto ai Funghi <span class="tag">V</span></h3><span class="dots"></span><b>$18</b></div><p>Carnaroli rice, wild mushrooms, parmesan, truffle oil</p></li>
+          </ul>
+        </div>
+
+        <div class="menu-panel" id="desserts" role="tabpanel" aria-labelledby="tab-desserts" hidden>
+          <ul class="menu-list">
+            <li><div class="menu-item__row"><h3>Tiramisù della Casa</h3><span class="dots"></span><b>$8</b></div><p>Our famous family recipe with mascarpone and espresso</p></li>
+            <li><div class="menu-item__row"><h3>Panna Cotta</h3><span class="dots"></span><b>$7</b></div><p>Vanilla cream with wild berry sauce</p></li>
+            <li><div class="menu-item__row"><h3>Cannoli Siciliani</h3><span class="dots"></span><b>$7</b></div><p>Crispy shells filled with sweet ricotta and pistachio</p></li>
+          </ul>
+        </div>
+
+        <div class="menu-panel" id="drinks" role="tabpanel" aria-labelledby="tab-drinks" hidden>
+          <ul class="menu-list">
+            <li><div class="menu-item__row"><h3>Espresso / Cappuccino</h3><span class="dots"></span><b>$3 / $4</b></div><p>Freshly roasted Italian beans</p></li>
+            <li><div class="menu-item__row"><h3>Homemade Lemonade</h3><span class="dots"></span><b>$5</b></div><p>Amalfi lemons, mint, sparkling water</p></li>
+            <li><div class="menu-item__row"><h3>House Wine (glass)</h3><span class="dots"></span><b>$7</b></div><p>Chianti red or Pinot Grigio white</p></li>
+            <li><div class="menu-item__row"><h3>Aperol Spritz</h3><span class="dots"></span><b>$9</b></div><p>Aperol, prosecco, soda, orange</p></li>
+          </ul>
+        </div>
+
+        <p class="menu-note"><span class="tag">V</span> Vegetarian · Gluten-free pasta available on request</p>
+      </div>
+    </section>
+
+    <!-- GALLERY -->
+    <section class="section" id="gallery">
+      <div class="container">
+        <div class="section__head">
+          <p class="eyebrow">Gallery</p>
+          <h2>A taste of Casa Olivo</h2>
+        </div>
+        <div class="gallery">
+          <img class="gallery__big" src="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?w=900&q=80" alt="Wood-fired pizza" loading="lazy">
+          <img src="https://images.unsplash.com/photo-1551183053-bf91a1d81141?w=600&q=80" alt="Fresh pasta" loading="lazy">
+          <img src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?w=600&q=80" alt="Restaurant interior" loading="lazy">
+          <img src="https://images.unsplash.com/photo-1571877227200-a0d98ea607e9?w=600&q=80" alt="Tiramisu" loading="lazy">
+          <img src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?w=600&q=80" alt="Cup of coffee" loading="lazy">
+        </div>
+      </div>
+    </section>
+
+    <!-- REVIEWS -->
+    <section class="section section--dark" id="reviews">
+      <div class="container">
+        <div class="section__head">
+          <p class="eyebrow">Reviews</p>
+          <h2>What our guests say</h2>
+          <p class="rating">★★★★★ <span>4.9 out of 5 · 600+ reviews</span></p>
+        </div>
+        <div class="reviews">
+          <figure class="review">
+            <div class="stars">★★★★★</div>
+            <blockquote>"The best carbonara I've had outside of Rome. Cozy atmosphere and the staff treat you like family."</blockquote>
+            <figcaption>— Sarah M.</figcaption>
+          </figure>
+          <figure class="review">
+            <div class="stars">★★★★★</div>
+            <blockquote>"We come every Friday for pizza night. The tiramisù is a must — don't leave without trying it!"</blockquote>
+            <figcaption>— James & Lucy</figcaption>
+          </figure>
+          <figure class="review">
+            <div class="stars">★★★★★</div>
+            <blockquote>"Perfect place for a date. Great wine, fresh pasta and very reasonable prices. Highly recommend."</blockquote>
+            <figcaption>— Daniel K.</figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- VISIT + BOOKING -->
+    <section class="section section--cream" id="visit">
+      <div class="container visit">
+        <div>
+          <p class="eyebrow">Visit us</p>
+          <h2>Opening hours & location</h2>
+          <table class="hours">
+            <tr><td>Monday</td><td>Closed</td></tr>
+            <tr><td>Tuesday – Thursday</td><td>12:00 – 22:00</td></tr>
+            <tr><td>Friday – Saturday</td><td>12:00 – 23:00</td></tr>
+            <tr><td>Sunday</td><td>12:00 – 21:00</td></tr>
+          </table>
+          <ul class="contacts">
+            <li>📍 24 Market Street, Old Town</li>
+            <li>📞 <a href="tel:+15551234567">+1 (555) 123-4567</a></li>
+            <li>✉️ <a href="mailto:hello@casaolivo.com">hello@casaolivo.com</a></li>
+          </ul>
+          <iframe class="map" title="Map showing Casa Olivo location" loading="lazy"
+            src="https://maps.google.com/maps?q=Piazza%20della%20Signoria%2C%20Florence&z=15&output=embed"></iframe>
+        </div>
+
+        <form class="booking" id="book">
+          <h3>Book a table</h3>
+          <p class="muted">We'll confirm your booking by phone or email.</p>
+          <div class="form-grid">
+            <label>Name<input type="text" name="name" required autocomplete="name"></label>
+            <label>Phone<input type="tel" name="phone" required autocomplete="tel"></label>
+            <label>Date<input type="date" name="date" id="date" required></label>
+            <label>Time
+              <select name="time" required>
+                <option value="" disabled selected>Choose…</option>
+                <option>12:00</option><option>13:00</option><option>14:00</option>
+                <option>18:00</option><option>19:00</option><option>20:00</option><option>21:00</option>
+              </select>
+            </label>
+            <label class="full">Guests
+              <select name="guests" required>
+                <option>1</option><option selected>2</option><option>3</option><option>4</option><option>5</option><option>6+</option>
+              </select>
+            </label>
+            <label class="full">Special requests <span class="muted">(optional)</span><textarea name="notes" rows="3"></textarea></label>
+          </div>
+          <button type="submit" class="btn btn--block">Request booking</button>
+          <p class="form-success" id="form-success" role="status" hidden>Grazie! 🍷 We've received your request and will confirm shortly.</p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer__inner">
+      <a href="#home" class="logo">Casa <span>Olivo</span></a>
+      <div class="socials">
+        <a href="#">Instagram</a>
+        <a href="#">Facebook</a>
+        <a href="#">TripAdvisor</a>
+      </div>
+      <p>© 2026 Casa Olivo. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <!-- Floating call button on phones -->
+  <a href="tel:+15551234567" class="call-fab" aria-label="Call Casa Olivo">📞</a>
+
+  <script src="script.js"></script>
+</body>
+</html>
