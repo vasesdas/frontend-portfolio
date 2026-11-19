@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pulse — Sales Dashboard</title>
+  <meta name="description" content="Pulse is an e-commerce analytics dashboard: revenue, orders, customers and products at a glance.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js" defer></script>
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <div class="layout">
+    <!-- SIDEBAR -->
+    <aside class="sidebar" id="sidebar">
+      <a href="#" class="logo"><span class="logo__mark">P</span>Pulse</a>
+      <nav class="menu">
+        <a href="#" class="is-active"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="9" rx="1"/><rect x="14" y="3" width="7" height="5" rx="1"/><rect x="14" y="12" width="7" height="9" rx="1"/><rect x="3" y="16" width="7" height="5" rx="1"/></svg>Dashboard</a>
+        <a href="#orders"><svg viewBox="0 0 24 24"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><path d="M3 6h18M16 10a4 4 0 0 1-8 0"/></svg>Orders</a>
+        <a href="#products"><svg viewBox="0 0 24 24"><path d="M21 16V8l-9-5-9 5v8l9 5 9-5z"/><path d="m3.3 7 8.7 5 8.7-5M12 22V12"/></svg>Products</a>
+        <a href="#"><svg viewBox="0 0 24 24"><circle cx="9" cy="7" r="4"/><path d="M3 21v-2a4 4 0 0 1 4-4h4a4 4 0 0 1 4 4v2M16 3.1a4 4 0 0 1 0 7.8M21 21v-2a4 4 0 0 0-3-3.9"/></svg>Customers</a>
+        <a href="#"><svg viewBox="0 0 24 24"><path d="M3 3v18h18"/><path d="m7 14 4-4 4 4 5-5"/></svg>Analytics</a>
+        <a href="#"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.7 1.7 0 0 0 .3 1.8l.1.1a2 2 0 1 1-2.8 2.8l-.1-.1a1.7 1.7 0 0 0-1.8-.3 1.7 1.7 0 0 0-1 1.5V21a2 2 0 1 1-4 0v-.1a1.7 1.7 0 0 0-1.1-1.5 1.7 1.7 0 0 0-1.8.3l-.1.1a2 2 0 1 1-2.8-2.8l.1-.1a1.7 1.7 0 0 0 .3-1.8 1.7 1.7 0 0 0-1.5-1H3a2 2 0 1 1 0-4h.1a1.7 1.7 0 0 0 1.5-1.1 1.7 1.7 0 0 0-.3-1.8l-.1-.1a2 2 0 1 1 2.8-2.8l.1.1a1.7 1.7 0 0 0 1.8.3H9a1.7 1.7 0 0 0 1-1.5V3a2 2 0 1 1 4 0v.1a1.7 1.7 0 0 0 1 1.5 1.7 1.7 0 0 0 1.8-.3l.1-.1a2 2 0 1 1 2.8 2.8l-.1.1a1.7 1.7 0 0 0-.3 1.8V9a1.7 1.7 0 0 0 1.5 1H21a2 2 0 1 1 0 4h-.1a1.7 1.7 0 0 0-1.5 1z"/></svg>Settings</a>
+      </nav>
+      <div class="upgrade">
+        <b>Upgrade to Pro</b>
+        <p>Unlock forecasts and custom reports.</p>
+        <button class="btn btn--primary btn--sm">Upgrade</button>
+      </div>
+    </aside>
+    <div class="overlay" id="overlay"></div>
+
+    <!-- MAIN -->
+    <div class="main">
+      <header class="topbar">
+        <button class="icon-btn burger" id="burger" aria-label="Open menu" aria-expanded="false" aria-controls="sidebar">
+          <svg viewBox="0 0 24 24"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
+        </button>
+        <div>
+          <h1>Good morning, Alex 👋</h1>
+          <p class="muted">Here's what's happening with your store.</p>
+        </div>
+        <div class="topbar__right">
+          <div class="segmented" role="group" aria-label="Period" id="period">
+            <button data-period="7">7D</button>
+            <button data-period="30" class="is-active">30D</button>
+            <button data-period="90">90D</button>
+          </div>
+          <button class="icon-btn" id="theme-toggle" aria-label="Toggle dark mode">
+            <svg viewBox="0 0 24 24"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg>
+          </button>
+          <img class="avatar" src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=96&q=80" alt="Alex Morgan">
+        </div>
+      </header>
+
+      <!-- KPIs -->
+      <section class="kpis" id="kpis" aria-label="Key metrics"></section>
+
+      <!-- CHARTS -->
+      <section class="grid-2">
+        <div class="card card--wide">
+          <div class="card__head">
+            <div><h2>Revenue</h2><p class="muted" id="revenue-sub"></p></div>
+            <div class="legend"><span class="legend__dot legend__dot--a"></span>This period <span class="legend__dot legend__dot--b"></span>Previous</div>
+          </div>
+          <div class="chart-box"><canvas id="revenue-chart" aria-label="Revenue chart" role="img"></canvas></div>
+        </div>
+        <div class="card">
+          <div class="card__head"><div><h2>Sales by channel</h2><p class="muted">Share of revenue</p></div></div>
+          <div class="chart-box chart-box--donut"><canvas id="channel-chart" aria-label="Sales by channel chart" role="img"></canvas></div>
+          <ul class="channels" id="channels"></ul>
+        </div>
+      </section>
+
+      <!-- ORDERS TABLE -->
+      <section class="card" id="orders">
+        <div class="card__head card__head--wrap">
+          <div><h2>Recent orders</h2><p class="muted" id="orders-count"></p></div>
+          <div class="table-tools">
+            <label class="search">
+              <svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+              <input type="search" id="search" placeholder="Search orders…" aria-label="Search orders">
+            </label>
+            <select id="status-filter" aria-label="Filter by status">
+              <option value="">All statuses</option>
+              <option>Paid</option>
+              <option>Pending</option>
+              <option>Shipped</option>
+              <option>Refunded</option>
+            </select>
+          </div>
+        </div>
+        <div class="table-wrap">
+          <table class="table">
+            <thead>
+              <tr>
+                <th><button data-sort="id">Order</button></th>
+                <th><button data-sort="customer">Customer</button></th>
+                <th><button data-sort="date">Date</button></th>
+                <th><button data-sort="status">Status</button></th>
+                <th class="num"><button data-sort="amount">Amount</button></th>
+              </tr>
+            </thead>
+            <tbody id="orders-body"></tbody>
+          </table>
+        </div>
+        <div class="pagination">
+          <span class="muted" id="page-info"></span>
+          <div>
+            <button class="icon-btn" id="prev-page" aria-label="Previous page">←</button>
+            <button class="icon-btn" id="next-page" aria-label="Next page">→</button>
+          </div>
+        </div>
+      </section>
+
+      <!-- TOP PRODUCTS -->
+      <section class="card" id="products">
+        <div class="card__head"><div><h2>Top products</h2><p class="muted">By units sold</p></div></div>
+        <ul class="products" id="products-list"></ul>
+      </section>
+
+      <footer class="footer muted">© 2026 Pulse Analytics · Demo dashboard with sample data</footer>
+    </div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NOVA — Interior Design Studio</title>
+  <meta name="description" content="NOVA is a premium interior design studio creating modern apartments, houses and commercial spaces.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header class="header" id="header">
+    <div class="container header__inner">
+      <a href="#home" class="logo">NOVA</a>
+      <nav class="nav" id="nav">
+        <a href="#projects">Projects</a>
+        <a href="#about">About</a>
+        <a href="#services">Services</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <button class="burger" id="burger" aria-label="Open menu" aria-expanded="false" aria-controls="nav">
+        <span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <!-- HERO -->
+    <section class="hero" id="home">
+      <img class="hero__img" src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?w=2000&q=80" alt="Bright modern living room with neutral furniture">
+      <div class="hero__overlay"></div>
+      <div class="container hero__content">
+        <p class="label hero__label">Interior Design Studio — Est. 2012</p>
+        <h1 class="hero__title">Spaces that<br><em>inspire</em> living.</h1>
+        <a href="#projects" class="btn btn--light">Explore Projects</a>
+      </div>
+      <a href="#intro" class="hero__scroll" aria-label="Scroll down">Scroll</a>
+    </section>
+
+    <!-- INTRO -->
+    <section class="intro section" id="intro">
+      <div class="container intro__grid">
+        <p class="label reveal">The Studio</p>
+        <p class="intro__text reveal">
+          NOVA is an independent studio crafting refined residential and commercial interiors.
+          We combine quiet architecture, honest materials and meticulous detail to create spaces
+          that feel calm, personal and timeless.
+        </p>
+      </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section class="section" id="projects">
+      <div class="container">
+        <div class="section__head reveal">
+          <p class="label">Selected Work</p>
+          <h2 class="section__title">Projects</h2>
+        </div>
+
+        <div class="filters reveal" role="group" aria-label="Filter projects">
+          <button class="filter is-active" data-filter="all">All</button>
+          <button class="filter" data-filter="apartments">Apartments</button>
+          <button class="filter" data-filter="houses">Houses</button>
+          <button class="filter" data-filter="commercial">Commercial</button>
+        </div>
+
+        <div class="projects" id="projects-grid">
+          <article class="project reveal" data-category="apartments">
+            <button class="project__img" aria-label="Open Linen Loft in full screen">
+              <img src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=1600&q=80" alt="Linen Loft living room" loading="lazy">
+            </button>
+            <h3 class="project__title">Linen Loft</h3>
+            <p class="project__meta">Apartment · Milan · 140 m²</p>
+          </article>
+
+          <article class="project reveal" data-category="houses">
+            <button class="project__img" aria-label="Open Cedar House in full screen">
+              <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=1600&q=80" alt="Cedar House exterior" loading="lazy">
+            </button>
+            <h3 class="project__title">Cedar House</h3>
+            <p class="project__meta">House · Lisbon · 320 m²</p>
+          </article>
+
+          <article class="project reveal" data-category="commercial">
+            <button class="project__img" aria-label="Open Atelier Office in full screen">
+              <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?w=1600&q=80" alt="Atelier Office workspace" loading="lazy">
+            </button>
+            <h3 class="project__title">Atelier Office</h3>
+            <p class="project__meta">Commercial · Berlin · 610 m²</p>
+          </article>
+
+          <article class="project reveal" data-category="apartments">
+            <button class="project__img" aria-label="Open Stone Residence in full screen">
+              <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=1600&q=80" alt="Stone Residence interior" loading="lazy">
+            </button>
+            <h3 class="project__title">Stone Residence</h3>
+            <p class="project__meta">Apartment · Paris · 180 m²</p>
+          </article>
+
+          <article class="project reveal" data-category="houses">
+            <button class="project__img" aria-label="Open Dune Villa in full screen">
+              <img src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=1600&q=80" alt="Dune Villa exterior" loading="lazy">
+            </button>
+            <h3 class="project__title">Dune Villa</h3>
+            <p class="project__meta">House · Marbella · 450 m²</p>
+          </article>
+
+          <article class="project reveal" data-category="commercial">
+            <button class="project__img" aria-label="Open Oro Café in full screen">
+              <img src="https://images.unsplash.com/photo-1554118811-1e0d58224f24?w=1600&q=80" alt="Oro Café interior" loading="lazy">
+            </button>
+            <h3 class="project__title">Oro Café</h3>
+            <p class="project__meta">Commercial · Copenhagen · 120 m²</p>
+          </article>
+
+          <article class="project reveal" data-category="apartments">
+            <button class="project__img" aria-label="Open Quiet Kitchen in full screen">
+              <img src="https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?w=1600&q=80" alt="Quiet Kitchen interior" loading="lazy">
+            </button>
+            <h3 class="project__title">Quiet Kitchen</h3>
+            <p class="project__meta">Apartment · London · 95 m²</p>
+          </article>
+
+          <article class="project reveal" data-category="houses">
+            <button class="project__img" aria-label="Open Oak Retreat in full screen">
+              <img src="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?w=1600&q=80" alt="Oak Retreat living space" loading="lazy">
+            </button>
+            <h3 class="project__title">Oak Retreat</h3>
+            <p class="project__meta">House · Zurich · 280 m²</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section class="section section--alt" id="about">
+      <div class="container">
+        <div class="about__grid">
+          <div class="reveal">
+            <p class="label">About</p>
+            <h2 class="section__title">A studio built on <em>quiet</em> details.</h2>
+          </div>
+          <div class="about__text reveal">
+            <p>Founded in 2012 by architect Elena Novak, NOVA started as a two-person workshop in a converted Milan warehouse. Today our team of designers, architects and visualisers works with private clients and brands across Europe.</p>
+            <p>We believe a great interior is not decorated — it is composed. Every material, line and light source is chosen with intention.</p>
+          </div>
+        </div>
+
+        <div class="stats">
+          <div class="stat reveal"><span class="stat__num">140+</span><span class="stat__label">Projects completed</span></div>
+          <div class="stat reveal"><span class="stat__num">12</span><span class="stat__label">Years of practice</span></div>
+          <div class="stat reveal"><span class="stat__num">18</span><span class="stat__label">Design awards</span></div>
+        </div>
+
+        <h3 class="sub-title reveal">Our Approach</h3>
+        <div class="approach">
+          <div class="approach__item reveal">
+            <span class="approach__num">01</span>
+            <h4>Listen</h4>
+            <p>We start with how you live and work — your rituals, habits and the feeling you want to come home to.</p>
+          </div>
+          <div class="approach__item reveal">
+            <span class="approach__num">02</span>
+            <h4>Compose</h4>
+            <p>Layout, light and materials are designed together as one calm, coherent composition.</p>
+          </div>
+          <div class="approach__item reveal">
+            <span class="approach__num">03</span>
+            <h4>Craft</h4>
+            <p>We manage every detail through to installation, working with trusted makers and craftsmen.</p>
+          </div>
+        </div>
+
+        <h3 class="sub-title reveal">Team</h3>
+        <div class="team">
+          <figure class="member reveal">
+            <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=600&q=80" alt="Elena Novak" loading="lazy">
+            <figcaption><strong>Elena Novak</strong><span>Founder & Principal</span></figcaption>
+          </figure>
+          <figure class="member reveal">
+            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=600&q=80" alt="Marco Rossi" loading="lazy">
+            <figcaption><strong>Marco Rossi</strong><span>Lead Architect</span></figcaption>
+          </figure>
+          <figure class="member reveal">
+            <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=600&q=80" alt="Sofia Lind" loading="lazy">
+            <figcaption><strong>Sofia Lind</strong><span>Interior Designer</span></figcaption>
+          </figure>
+          <figure class="member reveal">
+            <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=600&q=80" alt="James Carter" loading="lazy">
+            <figcaption><strong>James Carter</strong><span>3D Visualiser</span></figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- SERVICES -->
+    <section class="section" id="services">
+      <div class="container">
+        <div class="section__head reveal">
+          <p class="label">What we do</p>
+          <h2 class="section__title">Services</h2>
+        </div>
+        <div class="services">
+          <div class="service reveal">
+            <span class="service__num">01</span>
+            <h3>Interior Design</h3>
+            <p>Full-scope design from concept to completion: materials, furniture, lighting, custom joinery and styling.</p>
+          </div>
+          <div class="service reveal">
+            <span class="service__num">02</span>
+            <h3>Space Planning</h3>
+            <p>Smart layouts that improve flow, storage and natural light — for new builds and renovations alike.</p>
+          </div>
+          <div class="service reveal">
+            <span class="service__num">03</span>
+            <h3>3D Visualization</h3>
+            <p>Photorealistic renders and walkthroughs so you can experience your space before construction begins.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section class="section section--dark" id="contact">
+      <div class="container contact__grid">
+        <div class="reveal">
+          <p class="label">Contact</p>
+          <h2 class="section__title">Let's create your<br><em>next space.</em></h2>
+          <ul class="contact__info">
+            <li><a href="mailto:hello@nova-studio.com">hello@nova-studio.com</a></li>
+            <li><a href="tel:+390212345678">+39 02 1234 5678</a></li>
+            <li>Via Tortona 27, Milan</li>
+          </ul>
+          <div class="socials">
+            <a href="#" aria-label="Instagram">Instagram</a>
+            <a href="#" aria-label="Behance">Behance</a>
+            <a href="#" aria-label="Pinterest">Pinterest</a>
+          </div>
+        </div>
+
+        <form class="form reveal" id="contact-form">
+          <label>Name<input type="text" name="name" required autocomplete="name"></label>
+          <label>Email<input type="email" name="email" required autocomplete="email"></label>
+          <label>Project type
+            <select name="type" required>
+              <option value="" disabled selected>Select…</option>
+              <option>Apartment</option>
+              <option>House</option>
+              <option>Commercial</option>
+            </select>
+          </label>
+          <label>Message<textarea name="message" rows="4" required></textarea></label>
+          <button type="submit" class="btn btn--light">Send Message</button>
+          <p class="form__success" id="form-success" role="status" hidden>Thank you! We'll be in touch within 24 hours.</p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer__inner">
+      <span class="logo">NOVA</span>
+      <span>© 2026 NOVA Interior Studio. All rights reserved.</span>
+    </div>
+  </footer>
+
+  <!-- LIGHTBOX -->
+  <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Project image" hidden>
+    <button class="lightbox__close" aria-label="Close">×</button>
+    <button class="lightbox__nav lightbox__prev" aria-label="Previous image">‹</button>
+    <figure>
+      <img src="" alt="" id="lightbox-img">
+      <figcaption id="lightbox-caption"></figcaption>
+    </figure>
+    <button class="lightbox__nav lightbox__next" aria-label="Next image">›</button>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
